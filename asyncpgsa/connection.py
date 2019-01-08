@@ -45,7 +45,9 @@ def _execute_default_attr(query, param, attr_name):
     for col in query.table.columns:
         attr = getattr(col, attr_name)
         if attr and param.get(col.name) is None:
-            if attr.is_scalar:
+            if attr.is_sequence:
+                continue
+            elif attr.is_scalar:
                 param[col.name] = attr.arg
             elif attr.is_callable:
                 param[col.name] = attr.arg({})
