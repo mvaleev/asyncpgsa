@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from setuptools import setup
+from setuptools import setup, find_packages
 
 version = {}
 
@@ -9,6 +9,7 @@ with open('asyncpgsa/version.py') as f:
 setup(
     name='asyncpgsa',
     version=version['__version__'],
+    packages=find_packages(exclude=[".git"]),
     install_requires=[
         'asyncpg',
         'sqlalchemy',
