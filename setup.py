@@ -13,7 +13,7 @@ setup(
         'asyncpg',
         'sqlalchemy',
     ],
-    packages=find_packages(exclude=['.git']),
+    packages=['asyncpgsa', 'asyncpgsa.testing'],
     url='https://github.com/canopytax/asyncpgsa',
     license='Apache 2.0',
     author='nhumrich',
