@@ -1,4 +1,4 @@
 recursive-include .git *
 include .travis.yml
 prune .git
-prune .travis.yml
+exclude .travis.yml
