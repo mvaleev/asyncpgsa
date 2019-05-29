@@ -9,12 +9,11 @@ with open('asyncpgsa/version.py') as f:
 setup(
     name='asyncpgsa',
     version=version['__version__'],
-    packages=find_packages(exclude=[".git"]),
     install_requires=[
         'asyncpg',
         'sqlalchemy',
     ],
-    packages=['asyncpgsa', 'asyncpgsa.testing'],
+    packages=find_packages('asyncpgsa', 'asyncpgsa.testing', exclude=[".git"]),
     url='https://github.com/canopytax/asyncpgsa',
     license='Apache 2.0',
     author='nhumrich',
