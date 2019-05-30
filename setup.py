@@ -10,8 +10,8 @@ setup(
     name='asyncpgsa',
     version=version['__version__'],
     install_requires=[
-        'asyncpg',
-        'sqlalchemy',
+        'asyncpg==0.18.3',
+        'sqlalchemy==1.3.4',
     ],
     packages=['asyncpgsa', 'asyncpgsa.testing'],
     url='https://github.com/canopytax/asyncpgsa',
